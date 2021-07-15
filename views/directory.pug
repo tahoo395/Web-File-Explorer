@@ -1,0 +1,63 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{directory_url}
+        script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+        link(rel="shortcut icon", href="/intro/logo.svg", type="image/x-icon")
+        style
+            include css/common.css
+            include css/directory.css
+    body 
+        // It will render the directories . Some of the information are came from getFiles.js . like: All the directories and the path to get the directories. We can say that this is the renderer of getFiles.js. 
+
+        
+        if (isDirectory) 
+            .top 
+                a(href=previous title="Go to the previous directory by clicking me")
+                    img(src="/icons/back.svg").back 
+                input.search(type="text" placeholder='Search through me')
+
+            if(directories.length > 0)
+                ul 
+                    each i in directories 
+                        li.item(data-parent = parent) 
+                            img.icon
+                            a(href=directory_url+i+'/')=i
+            else if(directories.length == 0)
+                ul
+                    li.item(data-parent = parent) 
+                        a(href="#") Sorry No files or directories are found :(
+        else 
+            p=directories
+    
+        // A context menu which has remove and refresh functionalities.
+
+        .context-menu#files
+            button.file New File
+            hr
+            button.folder New Folder
+            hr
+            button.refresh Refresh
+            hr
+            button.rename Rename
+            hr
+            button.copy Copy
+            hr
+            button.paste Paste
+            hr
+            button.remove Remove
+
+
+        script(defer) 
+            include js/search.js
+            include js/context.js
+            include js/icons.js
+            //- include js/main.js
+        
+
+
+
+        

@@ -1,0 +1,54 @@
+.top {
+  display: flex;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  gap: -10px;
+  fill: #2c3e50;
+}
+
+.back {
+  width: 12px;
+  cursor: pointer;
+}
+
+.context-menu {
+  min-height: 30px;
+  width: 250px;
+  list-style: none;
+  background-color: #636e72;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 10px 10px 10px 10px;
+  position: absolute;
+  display: none;
+  z-index: 100000;
+}
+
+.context-menu button {
+  color: #dfe6e9;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+}
+
+.context-menu hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+}
+.disabledLi{
+  background-color: rgb(198, 214, 201);
+} 
+.disabledLi:hover{
+  background-color: rgb(198, 214, 201);
+}
+.disabledA{
+  cursor:default;
+  color: #8a798d;
+}

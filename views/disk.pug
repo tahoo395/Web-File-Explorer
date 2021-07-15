@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Discs
+        include intro/index.pug
+        style
+            include css/common.css
+
+    body 
+        // This file is the renderer for getDiscs.js
+
+        input(type="text" placeholder='Search through me').search
+
+        ul
+            for disk in  disks
+                li 
+                    img.icon(src="/icons/disc.svg")
+                    a(href='/'+disk+'/')=disk
+
+    script 
+        include js/search.js

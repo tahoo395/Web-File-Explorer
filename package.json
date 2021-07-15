@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "nodemon index.js",
-    "prod": "node index.js"
+    "start": "node index.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.9"

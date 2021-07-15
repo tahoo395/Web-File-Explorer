@@ -6,6 +6,7 @@
 1. It can render all the discs in your file system  
 1. It can render all the icons for all the files  
 1. It can search trough the files and dicks
+1. It can open a file with the default app
 1. It can delete file  
 1. It can refresh the web file explorer by its own 
 1. It can copy a file 
